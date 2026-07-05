@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Tags -->
+    <title>Nutricionista em Canoinhas | Helen Fin | Emagrecimento, Hipertrofia e Saúde</title>
+    <meta name="description" content="Conquiste resultados reais sem dietas restritivas. Atendimento nutricional presencial e online com plano alimentar personalizado, acompanhamento via WhatsApp e foco em emagrecimento, hipertrofia e saúde.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display para os títulos (estética editorial/elegante) e Montserrat para textos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Paleta extraída da imagem */
+            --bg-color: #f2f1ed;        /* Bege clarinho / Off-white */
+            --text-color: #1a252c;      /* Azul escuro / Grafite (texto principal e pontilhados) */
+            --accent-color: #c95a43;    /* Terracota / Laranja escuro (fundo do destaque) */
+            --white: #ffffff;
+            
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Tipografia Base */
+        h1, h2, h3 {
+            font-family: var(--font-title);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .elegant-title {
+            font-size: 3.5rem;
+            font-style: italic;
+            line-height: 1.1;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .dotted-divider {
+            border: none;
+            border-top: 4px dotted var(--text-color);
+            width: 80%;
+            max-width: 300px;
+            margin: 20px auto 30px auto;
+            opacity: 0.8;
+        }
+        
+        .dotted-divider.left {
+            margin-left: 0;
+        }
+
+        .highlight-bg {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 2px 8px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 40px;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid var(--text-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-color);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb956;
+            color: white;
+            border-color: #1eb956;
+            transform: translateY(-2px);
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #eae9e4 0%, var(--bg-color) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-style: normal;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-style: italic;
+        }
+
+        .hero-benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .hero-benefits li {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-benefits i {
+            color: var(--accent-color);
+        }
+
+        /* Text Blocks */
+        .text-block-center {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Split Layouts (Imagem + Texto) */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .split-layout.reverse .image-col {
+            order: 2;
+        }
+
+        .image-col img, .image-placeholder {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(26, 37, 44, 0.08);
+            object-fit: cover;
+        }
+
+        .image-placeholder {
+            background-color: #e0ded8;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        .elegant-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .elegant-list li {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-style: italic;
+        }
+
+        .elegant-list li::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--text-color);
+            border-radius: 50%;
+        }
+
+        /* Especial para seção de avaliação replicando a imagem */
+        .avaliacao-text-col h2 {
+            font-size: 4rem;
+            text-transform: lowercase;
+            line-height: 0.9;
+        }
+
+        .avaliacao-text-col p {
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Grid Simples (Diferenciais) */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(26, 37, 44, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 15px 30px rgba(26, 37, 44, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .card h4 {
+            font-size: 1.25rem;
+            font-family: var(--font-title);
+            font-weight: 600;
+        }
+
+        /* Checklist simples */
+        .simple-checklist {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .simple-checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .simple-checklist i {
+            color: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        /* CTA Footer */
+        .cta-section {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta-section h2 {
+            color: var(--bg-color);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(242, 241, 237, 0.8);
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            background-color: #12191d;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .split-layout.reverse .image-col {
+                order: -1;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .elegant-title, .avaliacao-text-col h2 {
+                font-size: 3rem;
+            }
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+            .image-placeholder {
+                height: 300px;
+            }
+            .btn {
+                padding: 16px 30px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Conquiste resultados reais sem dietas restritivas.</h1>
+            <p class="subheadline">Emagreça, ganhe massa muscular ou melhore sua saúde com um plano alimentar personalizado, flexível e adaptado à sua rotina.</p>
+            
+            <ul class="hero-benefits">
+                <li><i class="fas fa-check"></i> Atendimento presencial e online</li>
+                <li><i class="fas fa-check"></i> Plano alimentar personalizado</li>
+                <li><i class="fas fa-check"></i> Acompanhamento via WhatsApp</li>
+                <li><i class="fas fa-check"></i> Estratégias que respeitam sua rotina</li>
+            </ul>
+
+            <a href="https://wa.me/5500000000000?text=Quero%20transformar%20minha%20alimentação!" target="_blank" class="btn btn-whatsapp">
+                Quero agendar minha consulta pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Apresentação -->
+    <section>
+        <div class="container">
+            <div class="split-layout">
+                <div class="image-col">
+                    <div class="image-placeholder">
+                        [ Insira sua Foto Aqui ]
+                    </div>
+                </div>
+                <div class="text-col">
+                    <h2 class="elegant-title" style="text-align: left;">Prazer, sou<br>Helen Fin.</h2>
+                    <hr class="dotted-divider left">
+                    <p>Sou nutricionista e acredito que a alimentação precisa fazer sentido para a vida real.</p>
+                    <p>Meu objetivo é ajudar você a conquistar resultados de forma leve, prática e sustentável, sem dietas extremamente restritivas ou planos impossíveis de seguir.</p>
+                    <p>Cada paciente possui uma rotina, preferências e objetivos diferentes. Por isso, cada plano alimentar é desenvolvido de forma totalmente individualizada.</p>
+                    <p style="font-style: italic; font-weight: 500;">Aqui, você encontra uma nutrição baseada em equilíbrio, estratégia e constância.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. O problema -->
+    <section style="background-color: var(--white);">
+        <div class="container text-block-center">
+            <h2 class="elegant-title">Você não precisa viver preso a dietas.</h2>
+            <hr class="dotted-divider">
+            <p>Talvez você já tenha tentado diversas dietas que funcionaram apenas por alguns dias.</p>
+            <p>Restrições exageradas, fome constante e planos difíceis de seguir acabam gerando frustração e fazem muitas pessoas desistirem.</p>
+            <p>A boa notícia é que existe outra forma de alcançar resultados.</p>
+            <p style="font-weight: 500;">Com uma estratégia personalizada, é possível emagrecer, ganhar massa muscular ou melhorar sua saúde sem abrir mão da sua rotina.</p>
+        </div>
+    </section>
+
+    <!-- 4. Como funciona a consulta -->
+    <section>
+        <div class="container">
+            <h2 class="elegant-title">Um atendimento pensado para entender você.</h2>
+            <hr class="dotted-divider">
+            
+            <div class="split-layout reverse" style="margin-top: 50px;">
+                <div class="image-col">
+                    <div class="image-placeholder" style="height: 400px; background-color: #dcdad4;">
+                        [ Imagem de Consulta/Anotações ]
+                    </div>
+                </div>
+                <div class="text-col">
+                    <p>Antes de montar qualquer plano alimentar, é fundamental conhecer sua realidade. Durante a consulta, vamos conversar sobre:</p>
+                    <ul class="simple-checklist">
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Sua rotina</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Seus hábitos alimentares</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Preferências</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Histórico de saúde</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Objetivos</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Dificuldades</li>
+                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-top: 8px;"></i> Metas</li>
+                    </ul>
+                    <p style="margin-top: 30px; font-style: italic;">Assim, todas as orientações fazem sentido para o seu dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Avaliação física (ESTÉTICA DA IMAGEM) -->
+    <section style="background-color: var(--white); padding: 100px 0;">
+        <div class="container">
+            <div class="split-layout">
+                <div class="image-col">
+                    <div class="image-placeholder" style="height: 550px;">
+                        [ Imagem Adipômetro / Avaliação ]
+                    </div>
+                </div>
+                <div class="text-col avaliacao-text-col text-block-center">
+                    <h2 class="elegant-title">avaliação<br>física</h2>
+                    <hr class="dotted-divider">
+                    <p>Na consulta presencial, realizo uma avaliação física completa para acompanhar a sua <span class="highlight-bg">evolução:</span></p>
+                    
+                    <ul class="elegant-list text-block-center" style="max-width: 300px; text-align: left; margin: 30px auto;">
+                        <li>altura</li>
+                        <li>peso</li>
+                        <li>circunferências</li>
+                        <li>dobras cutâneas</li>
+                        <li>diâmetros ósseos</li>
+                        <li>perímetro médio do braço</li>
+                    </ul>
+                    <p style="font-size: 1rem; margin-top: 40px; color: var(--accent-color);">Esses dados permitem acompanhar seus resultados com muito mais precisão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Atendimento Online -->
+    <section>
+        <div class="container text-block-center">
+            <h2 class="elegant-title" style="font-size: 2.8rem;">Não mora perto?<br>Você também pode ser atendido.</h2>
+            <hr class="dotted-divider">
+            <p>O atendimento online mantém toda a qualidade da consulta presencial.</p>
+            <p>A avaliação física é adaptada e realizada por meio de fotos, permitindo um acompanhamento completo mesmo à distância.</p>
+            <p style="font-weight: 500;">Você recebe toda a orientação necessária sem sair de casa.</p>
+        </div>
+    </section>
+
+    <!-- 7. Plano alimentar -->
+    <section style="background-color: var(--white);">
+        <div class="container">
+            <div class="split-layout">
+                <div class="text-col">
+                    <h2 class="elegant-title" style="text-align: left;">Seu plano alimentar é construído junto com você.</h2>
+                    <hr class="dotted-divider left">
+                    <p>Durante a consulta, desenvolvemos um esboço do plano alimentar para confirmar que ele realmente faz sentido para sua rotina.</p>
+                    <p>Assim, você participa das decisões e garante que o plano seja possível de seguir.</p>
+                    <p>Depois da consulta, o plano completo é entregue em até 72 horas. Ele será:</p>
+                    
+                    <ul class="simple-checklist" style="grid-template-columns: 1fr;">
+                        <li><i class="fas fa-check"></i> Personalizado</li>
+                        <li><i class="fas fa-check"></i> Adaptado aos seus gostos</li>
+                        <li><i class="fas fa-check"></i> Flexível</li>
+                        <li><i class="fas fa-check"></i> Sem restrições desnecessárias</li>
+                        <li><i class="fas fa-check"></i> Com diversas opções de substituição</li>
+                        <li><i class="fas fa-check"></i> Alinhado ao seu objetivo</li>
+                    </ul>
+                </div>
+                <div class="image-col">
+                    <div class="image-placeholder" style="height: 500px; background-color: #dcdad4;">
+                        [ Imagem Plano/Refeição ]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Suporte & 9. Para quem é -->
+    <section>
+        <div class="container">
+            <div class="split-layout">
+                <!-- Suporte -->
+                <div class="text-col" style="background-color: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.03);">
+                    <h2 class="elegant-title" style="text-align: left; font-size: 2.2rem;">Você não fica sozinho após a consulta.</h2>
+                    <hr class="dotted-divider left" style="width: 50%;">
+                    <p>Durante o acompanhamento, permaneço disponível pelo WhatsApp para esclarecer dúvidas relacionadas ao seu plano alimentar.</p>
+                    <p style="font-weight: 500; color: var(--accent-color);">O objetivo é tornar sua jornada mais segura, leve e consistente.</p>
+                </div>
+                
+                <!-- Para quem é -->
+                <div class="text-col">
+                    <h2 class="elegant-title" style="text-align: left; font-size: 2.2rem;">Esse acompanhamento é para você que deseja:</h2>
+                    <ul class="elegant-list">
+                        <li>Emagrecer de forma saudável.</li>
+                        <li>Ganhar massa muscular.</li>
+                        <li>Melhorar sua alimentação.</li>
+                        <li>Criar hábitos sustentáveis.</li>
+                        <li>Aprender a comer sem culpa.</li>
+                        <li>Ter um plano alimentar que realmente consiga seguir.</li>
+                        <li>Cuidar da saúde com orientação profissional.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Diferenciais -->
+    <section style="background-color: var(--white);">
+        <div class="container">
+            <h2 class="elegant-title">Por que escolher a Helen?</h2>
+            <hr class="dotted-divider">
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🥗</div>
+                    <h4>Sem dietas restritivas</h4>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h4>Plano totalmente personalizado</h4>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📲</div>
+                    <h4>Suporte via WhatsApp</h4>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h4>Atendimento presencial e online</h4>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h4>Acompanhamento da evolução</h4>
+                </div>
+                <div class="card">
+                    <div class="card-icon">❤️</div>
+                    <h4>Nutrição baseada na sua realidade</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Chamada Final -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="elegant-title" style="color: var(--bg-color);">Seu objetivo merece uma estratégia que funciona na vida real.</h2>
+            <p>Você não precisa passar fome, eliminar todos os alimentos que gosta ou viver começando uma dieta nova toda segunda-feira. Com um acompanhamento nutricional personalizado, é possível construir resultados consistentes respeitando sua rotina e seus objetivos.</p>
+            
+            <a href="https://wa.me/5500000000000?text=Quero%20transformar%20minha%20alimentação!" target="_blank" class="btn btn-whatsapp">
+                👉 Quero falar com a Helen no WhatsApp
+            </a>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">Clique no botão acima para conversar comigo, tirar suas dúvidas e agendar sua consulta de forma rápida e prática.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Helen Fin Nutricionista © Todos os direitos reservados. CRN 10 14438/P</p>
+        </div>
+    </footer>
+
+</body>
+</html>
